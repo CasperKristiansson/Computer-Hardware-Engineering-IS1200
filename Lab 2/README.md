@@ -70,13 +70,13 @@ int main(int argc, char *argv[]){
 ```
 
 
-• What does it mean when a function does not return a value? How do you state that in a program? How can then the function (or more precisely, the procedure) perform anything useful? 
+1. What does it mean when a function does not return a value? How do you state that in a program? How can then the function (or more precisely, the procedure) perform anything useful? 
 
 Answer: When a function doesn’t return a value it means that the function only updates arguments or variables but does not return anything to where the function was called.
 Stating that a function won’t return a value is done with keyword void.
 The function can still be useful since variables and arguments can be changed.
 
-• How did you implement the side effect that is needed to make print_number behave correctly?
+2. How did you implement the side effect that is needed to make print_number behave correctly?
 
 Answer: (Supposed that the side effect was that if the function was called more than once it would separate the numbers into rows after a certain amount of columns was filled) It was implemented by creating an int called numOfPrints and adding 1 for every prime number that was printed and by checking that numOfPrints / COLUMNS would give the remainder 5. 
 
