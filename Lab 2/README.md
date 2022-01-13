@@ -280,7 +280,7 @@ Incrementing a pointer will change the address which leads to the pointer pointi
 4. Explain a statement in your code where you are dereferencing a pointer. What does this mean? Explain by comparing with the corresponding assembler code.
 
 Dereferencing a pointer means accessing the data/value that the pointer points to with the corresponding address. 
-```
+```assembly
 lb	$t0,0($a0)
 lw	$t1,0($a2)
 ```
