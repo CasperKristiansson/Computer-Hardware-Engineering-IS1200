@@ -5,19 +5,19 @@
 Start Code:
 ```assembly
 addi	$s0,$s0,1
-li	    $t0,0x5b
+li	$t0,0x5b
 ```
 
 Which lines of code had to be changed? Why?
 ```assembly
 addi	$s0,$s0,3
-li	    $t0,0x5D
+li	$t0,0x5D
 ```
 
 Ändrade 1 till en 3 för att skippa vad tredje karaktär. Vi ändrade även på t0 så att den skulle hoppa ut på rätt tillfälle.
 
 ## Assignment 2
-```
+```assembly
 hexasc:
 	add $t0, $zero, $zero
 	li $t0, 0x0f
@@ -45,13 +45,13 @@ Resultatet blir ett genom att vi lägger ihop talet 17 med 0f med hjälp av AND.
 Med hjälp av ett villkor så kan vi lätt bestämma om det vi vill får ut är mellan 0-9 eller 10-15 vilket sedan konverteras till ascii så att vi får ut bokstäverna a-f 
 
 ## Assignment 3
-```
+```assembly
 time2string:
 	PUSH $ra
 	PUSH $s0
 	PUSH $s1
 	la $s1, $a1
-    la $s0, $a0	
+    	la $s0, $a0	
 
 	#Add null-byte to the end of $a0
 	la $t5, 0x00
@@ -112,7 +112,7 @@ The temporary registers are used but never saved. This is because there are temp
 All the lines of code from the beginning of the second iteration until the Add ‘:’ code block takes over.
 
 ## Assignment 4
-```
+```assembly
 delay:
 	la $t1, ($a0)
 
@@ -144,14 +144,14 @@ done:
 1.	If the argument value in register $a0 is zero, which instructions in your subroutine are executed? How many times each? Why?
 
 If the instruction $a0 is set to zero when calling the subroutine delay the instructions that are called are the following:
-```
+```assembly
 delay:
 	la $t1, ($a0)
 
 whileloop:
 	slt $t2, $zero, $t1
 	beq $t2, 0, donedone
-    nop
+    	nop
 
 done:
 	jr $ra
@@ -165,7 +165,7 @@ This is because as long as $a0 is more than $zero, it will jump into the while l
 Same as above
 
 ## Assignment 8:
-```
+```assembly
 time2string:
 	PUSH $ra
 	PUSH $s0
